@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "LootBear's Friend",
+    "version": "1.0.1",
+    "content_scripts":[{
+        "matches": [ 
+            "*://www.youtube.com/*"
+        ],
+        "js": [ "js/content_script.js" ]
+    }],
+    "background": {
+        "scripts": [ "js/content_script.js" ],
+        "persistent": true
+    },
+    "browser_action": {
+        "browser_style": true,
+        "default_icon": {
+            "16": "img/16.png"
+        },
+        "default_title": "LootBear's Friend",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage",
+        "<all_urls>"
+    ]
+}
